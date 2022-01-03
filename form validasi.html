@@ -1,0 +1,92 @@
+<html>
+    <head>
+        
+    </head>
+    <style>
+        body
+        {
+          background: rgb(183, 202, 144);
+          font-family: serif;
+        }
+        .formkomentar
+        {
+            border: 5px solid#d1d1d1;
+            width: 500px;
+            padding: 10px;
+        }
+         input,textarea
+         {
+             padding: 10px;
+             border: 3px solid #e6e6e6;
+             border-radius: 5px;
+             margin-bottom: 15px;
+         }
+         input:focus,textarea:focus
+         {
+             border:3px solid #5e4f4f;
+         }
+         textarea{
+             width:300px;
+         }
+         .kirimkomentar
+         {
+             padding: 10px;
+             border: 3px solid #e6e6e6;
+             border-radius: 5px;
+             margin-bottom: 15px;
+         }
+         .kirimkomentar:hover
+         {
+             border-style: solid;
+             border-color: black;
+             border-width: 3px;
+             cursor: pointer;
+         }
+
+    </style>
+
+    <script type="text/javascript">
+        
+        function kirim()
+        {
+            var Nama, Email;
+
+            Nama = document.getElementById("nama").value;
+            Email = document.getElementById("e-mail").value;
+
+            if (Nama != "" && Email != "")
+            {
+                alert('Terimakasih '+Nama+' atas komentar anda');
+            }
+            else
+            {
+                alert('Harap isikan data diri anda');
+            }
+
+        }
+
+    </script>
+    <body>
+        <form id="form komentar">
+              <div>
+                  <input type="text"name="nama"placeholder="nama" id="nama">
+              </div>
+              <div>
+                  <input type="text" name="e-mail" placeholder="e-mail" id="e-mail">
+              </div>
+            <div>
+                <button type="button" class="kirimkomentar" onclick="kirim()">Kirim coment</button>
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </form>
+    </body>
+</html>
